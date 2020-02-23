@@ -1,0 +1,64 @@
+{
+	"data": [
+		{
+			"sourceId": "B002",
+			"article_id": "001",
+			"update_time": "2019-12-02 10:00:00",
+			"modify_time": "2019-12-02 11:20:30",
+			"url": "https://storage.googleapis.com/coverr-main/mp4%2Fcoverr-clear-water-1559888911402.mp4",
+			"title": "情侣准备分手的时候被路人一个动作就拉回来了",
+			"source": "xx用户1",
+			"img": "",
+			"postid": "001",
+			"viewCounts": "121021",
+			"commentCount": "340",
+			"votecount": "260",
+			"replyCount": "600"
+		},
+		{
+			"sourceId": "B002",
+			"article_id": "001",
+			"update_time": "2019-12-02 10:00:00",
+			"modify_time": "2019-12-02 11:20:30",
+			"url": "https://storage.googleapis.com/coverr-main/mp4%2Fcoverr-breathtaking-reflection-1572023479601.mp4",
+			"title": "情侣准备分手的时候被路人一个动作就拉回来了",
+			"source": "xx用户1",
+			"img": "",
+			"postid": "001",
+			"viewCounts": "121021",
+			"commentCount": "340",
+			"votecount": "260",
+			"replyCount": "600"
+		},
+		{
+			"sourceId": "B002",
+			"article_id": "001",
+			"update_time": "2019-12-02 10:00:00",
+			"modify_time": "2019-12-02 11:20:30",
+			"url": "https://storage.googleapis.com/coverr-main/mp4%2FHeaven.mp4",
+			"title": "情侣准备分手的时候被路人一个动作就拉回来了",
+			"source": "xx用户1",
+			"img": "",
+			"postid": "001",
+			"viewCounts": "121021",
+			"commentCount": "340",
+			"votecount": "260",
+			"replyCount": "600"
+		},
+		{
+			"sourceId": "B002",
+			"article_id": "001",
+			"update_time": "2019-12-02 10:00:00",
+			"modify_time": "2019-12-02 11:20:30",
+			"url": "https://storage.googleapis.com/coverr-main/mp4%2FOne-Swan.mp4",
+			"title": "情侣准备分手的时候被路人一个动作就拉回来了",
+			"source": "xx用户1",
+			"img": "",
+			"postid": "001",
+			"viewCounts": "121021",
+			"commentCount": "340",
+			"votecount": "260",
+			"replyCount": "600"
+		}
+	]
+}
