@@ -22,10 +22,17 @@ choose the virtual device as target machine<br/>
 then click run button to run the app<br/>
 ![image](https://github.com/weizhenzhao/flutter_news_netbase/blob/master/images/click_run_button.png) 
 
-![image](https://github.com/weizhenzhao/flutter_news_netbase/blob/master/images/android-studio-running.png) 
 
+### The first screen combine hot news module:<br/>
+![image](https://github.com/weizhenzhao/flutter_news_netbase/blob/master/images/first_screen.jpg) 
 
+### All items page :<br/>
+![image](https://github.com/weizhenzhao/flutter_news_netbase/blob/master/images/all_items.jpg) 
 
+### The searching module :<br/>
+![image](https://github.com/weizhenzhao/flutter_news_netbase/blob/master/images/searching.jpg) 
 
+### The small video part :<br/>
+![image](https://github.com/weizhenzhao/flutter_news_netbase/blob/master/images/small_video.jpg) 
 
 
