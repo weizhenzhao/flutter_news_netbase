@@ -14,12 +14,16 @@ then open it with android studio client
 
 ## 2、Step for running
 start an android virtual device manager , making an virtual device
-
+![image](https://github.com/weizhenzhao/flutter_news_netbase/blob/master/images/android-studio-1.png) 
 
 ## 3、Step for running
-then flutter clean<br/>
+then in the cmd window of flutter_news_netbase root directory, type "flutter clean"<br/>
 choose the virtual device as target machine<br/>
 then click run button to run the app<br/>
+![image](https://github.com/weizhenzhao/flutter_news_netbase/blob/master/images/click_run_button.png) 
+
+![image](https://github.com/weizhenzhao/flutter_news_netbase/blob/master/images/android-studio-running.png) 
+
 
 
 
