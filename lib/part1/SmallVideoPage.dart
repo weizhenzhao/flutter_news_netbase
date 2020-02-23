@@ -162,12 +162,12 @@ class _VideoPageState extends State<VideoPage> {
         children: <Widget>[
           SizedBox(
             width: 300,
-            height: 338,
+            height: 300,
             child: inits
                 ? VideoPlayer(controller)
                 : Container(
               width: 300,
-              height: 338,
+              height: 300,
               color: Colors.teal,
             ),
           ),

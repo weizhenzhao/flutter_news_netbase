@@ -69,7 +69,7 @@ class _TitleContentsState extends State<TitleContents> {
         children: <Widget>[
           Container(
             height: 30,
-            width: 280,
+            width: 250,
             child: TextField(
               controller: _searchFieldController,
 
