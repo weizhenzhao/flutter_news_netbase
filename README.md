@@ -1,16 +1,28 @@
 # flutter_news_netbase
 
-netbase news for flutter
+flutter app for imitating net-ease-newsclient
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## 1、Step for downloading
 
-A few resources to get you started if this is your first Flutter project:
+'
+mkdir flutter_news_netbase
+cd flutter_news_netbase
+git clone https://github.com/weizhenzhao/flutter_news_netbase.git
+'
+then open it with android studio client
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 2、Step for running
+start an android virtual device manager , making an virtual device
+
+
+## 3、Step for running
+then flutter clean
+choose the virtual device as target machine
+then click run button to run the app
+
+
+
+
+
