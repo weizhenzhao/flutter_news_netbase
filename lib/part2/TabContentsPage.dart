@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 List<Widget> data=[
   RecentPage(),
-//  Center(child: Text('关注'),),
+  Center(child: Text('关注'),),
   Center(child: Text('头条'),),
   Center(child: Text('视频'),),
   Center(child: Text('娱乐'),),
@@ -33,7 +33,7 @@ List<Widget> data=[
 List<Widget> videoTabData = [
 
   Center(child: Text('推荐'),),
-  SmallVideoPage(),
+  SmallVideoPage(key:ObjectKey(SmallVideoPage())),
   Center(child: Text('榜单'),),
   Center(child: Text('超级IP'),),
   Center(child: Text('新衣人'),),

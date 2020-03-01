@@ -14,6 +14,7 @@ import 'package:flutter_news_netbase/part2/SearchBar.dart';
 import 'package:flutter_news_netbase/part1/HotPage.dart';
 import 'package:flutter_news_netbase/part1/NoticePage.dart';
 import 'package:flutter_news_netbase/part2/routes/VideoTabPage.dart';
+import 'package:flutter_news_netbase/part2/content2/VidaoTabPage2.dart';
 
 void main() => runApp(MyApp());
 
@@ -94,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           HomePage(),
           //SmallVideoPage(),
-          VideoTabPage(),
+          VideoTabPage2(),
           HotPage(),
           NoticePage(),
         ],
