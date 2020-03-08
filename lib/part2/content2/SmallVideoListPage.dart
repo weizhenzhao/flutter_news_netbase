@@ -36,7 +36,8 @@ class _SmallVideoListPageState extends State<SmallVideoListPage> {
                 VideoPage(widget.data.url),
                 buildAboveContents1(contexts),
                 buildAboveContents2(widget.data),
-                buildAboveContents3(widget.data)
+                buildAboveContents3(widget.data),
+                buildAboveContents4(width, 45)
               ],
             ),
           );
@@ -45,23 +46,16 @@ class _SmallVideoListPageState extends State<SmallVideoListPage> {
     );
   }
 
-//  Widget buildContents(BuildContext context, Data data) {
-//    double width = MediaQuery.of(context).size.width;
-//    double height = MediaQuery.of(context).size.height;
-//
-//    return Container(
-//      width: width,
-//      height: height,
-//      child: Stack(
-//        children: <Widget>[
-//          VideoPage(data.url),
-//          buildAboveContents1(),
-//          buildAboveContents2(data),
-//          buildAboveContents3(data)
-//        ],
-//      ),
-//    );
-//  }
+  // 评论框
+  // 修改4 把输入框 封装成一个类 StatefulWidget
+  Widget buildAboveContents4(double width, double height) {
+    return Positioned(
+      bottom: 12,
+      //left: ,
+      right: 10,
+      child: EditableTextView(width, height),
+    );
+  }
 
   Widget buildAboveContents1(BuildContext context) {
     return Positioned(
@@ -101,7 +95,7 @@ class _SmallVideoListPageState extends State<SmallVideoListPage> {
   Widget buildAboveContents2(Data data) {
     return Positioned(
       bottom: 80,
-      right: 20,
+      right: 10,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -166,7 +160,7 @@ class _SmallVideoListPageState extends State<SmallVideoListPage> {
     return Positioned(
       bottom: 60,
       left: 10,
-      right: 30,
+      right: 25,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -310,7 +304,7 @@ class _SmallVideoListPageState extends State<SmallVideoListPage> {
                 Navigator.of(context).pop();
               },
               Container(
-                height: 56,
+                height: 50,
                 color: Colors.white,
                 child: Center(
                   child: Text(
@@ -324,79 +318,6 @@ class _SmallVideoListPageState extends State<SmallVideoListPage> {
         ),
       );
     });
-  }
-
-  // 评论框
-  // 修改4 把输入框 封装成一个类 StatefulWidget
-  Widget buildAboveContents4(double width, double height) {
-    //    return Positioned(
-    //      bottom: 5,
-    //      left: 15,
-    //      right: 30,
-    //      child: Container(
-    //        width: width,
-    //        height: 40,
-    //        child: TextField(
-    //          controller: _controller,
-    //          decoration: InputDecoration(
-    //            border: OutlineInputBorder(
-    //              borderSide: BorderSide(
-    //                width: 1.0,
-    //                color: Colors.grey[400],
-    //              ),
-    //              borderRadius: BorderRadius.all(Radius.circular(30)),
-    //            ),
-    //            enabledBorder: OutlineInputBorder(
-    //              borderSide: BorderSide(
-    //                width: 1.0,
-    //                color: Colors.grey[400],
-    //              ),
-    //              borderRadius: BorderRadius.all(Radius.circular(30)),
-    //            ),
-    //            disabledBorder: OutlineInputBorder(
-    //              borderSide: BorderSide(
-    //                width: 1.0,
-    //                color: Colors.grey[400],
-    //              ),
-    //              borderRadius: BorderRadius.all(Radius.circular(30)),
-    //            ),
-    //            focusedBorder: OutlineInputBorder(
-    //              borderSide: BorderSide(
-    //                width: 1.0,
-    //                color: Colors.grey[400],
-    //              ),
-    //              borderRadius: BorderRadius.all(Radius.circular(30)),
-    //            ),
-    //            focusedErrorBorder: OutlineInputBorder(
-    //              borderSide: BorderSide(
-    //                width: 1.0,
-    //                color: Colors.red,
-    //              ),
-    //              borderRadius: BorderRadius.all(Radius.circular(30)),
-    //            ),
-    //            errorBorder: OutlineInputBorder(
-    //              borderSide: BorderSide(
-    //                width: 1.0,
-    //                color: Colors.red,
-    //              ),
-    //              borderRadius: BorderRadius.all(Radius.circular(30)),
-    //            ),
-    //            contentPadding: EdgeInsets.all(5),
-    //            hintText: '我来说两句',
-    //            hintStyle: TextStyle(color: Colors.grey[200], fontSize: 14),
-    //            hintMaxLines: 1,
-    //            enabled: true,
-    //          ),
-    //        ),
-    //      ),
-    //    );
-
-    return Positioned(
-      bottom: 12,
-      left: 15,
-      right: 30,
-      child: EditableTextView(width, height),
-    );
   }
 
   @override
@@ -481,7 +402,7 @@ class EditableTextViewState extends State<EditableTextView> {
               print('点击了发送，发送的内容是：${_controller.text.toString()}');
             },
             Container(
-              width: 40,
+              width: 35,
               height: 25,
               margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
               decoration: new BoxDecoration(

@@ -16,7 +16,7 @@ class TabCommon extends StatefulWidget {
 
   List<Widget> tabWidgets = <Widget>[];
 
-  Widget titleWidgets;
+//  Widget titleWidgets;
 
   Color indicatorColor;
 
@@ -42,20 +42,31 @@ class TabCommon extends StatefulWidget {
 
   double widths;
 
-  TabCommon(this.tabStrData, this.tabWidgets, this.titleWidgets,
-      {this.backgroundColor,
-      this.isShowSearIcon,
-      this.indicatorColor,
-      this.indicatorWeight,
-      this.indicatorPadding,
-      this.indicatorSize,
-      this.labelColor,
-      this.labelStyle,
-      this.unselectedLabelColor,
-      this.unselectedLabelStyle,
-      this.dragStartBehavior,
-      Key key})
-      : super(key: key);
+  bool showContainer;
+
+  Color containerBorderColor;
+
+  bool isScrollable = true;
+
+  TabCommon(
+    this.tabStrData,
+    this.tabWidgets, {
+    this.backgroundColor,
+    this.isShowSearIcon,
+    this.indicatorColor,
+    this.indicatorWeight,
+    this.indicatorPadding,
+    this.indicatorSize,
+    this.labelColor,
+    this.labelStyle,
+    this.unselectedLabelColor,
+    this.unselectedLabelStyle,
+    this.dragStartBehavior,
+    Key key,
+    this.showContainer = false,
+    this.containerBorderColor,
+    this.isScrollable,
+  }) : super(key: key);
 
   @override
   _TabCommonState createState() => _TabCommonState();
@@ -70,12 +81,34 @@ class _TabCommonState extends State<TabCommon>
   void initState() {
     super.initState();
     widget._tabController = TabController(
-        length: videoTabData.length, vsync: this, initialIndex: widget._result);
+        length: widget.tabWidgets.length,
+        vsync: this,
+        initialIndex: widget._result);
     widget._tabs = widget.tabStrData.map((item) {
-      currentTab = Tab(
-        text: item,
-      );
-      return currentTab;
+      if (widget.showContainer == true) {
+        return Tab(
+          child: Container(
+            padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+            decoration: new BoxDecoration(
+              border: new Border.all(
+                color: widget.containerBorderColor == null
+                    ? Colors.grey
+                    : widget.containerBorderColor,
+                width: 1,
+              ),
+              borderRadius: BorderRadius.all(
+                Radius.circular(20),
+              ),
+            ),
+            child: Text(item),
+          ),
+        );
+      } else {
+        currentTab = Tab(
+          text: item,
+        );
+        return currentTab;
+      }
     }).toList();
   }
 
@@ -122,7 +155,7 @@ class _TabCommonState extends State<TabCommon>
       key: PageStorageKey<Tab>(currentTab),
       tabs: tabs,
       controller: widget._tabController,
-      isScrollable: true,
+      isScrollable: widget.isScrollable,
       indicatorColor:
           widget.indicatorColor == null ? Colors.black : widget.indicatorColor,
       indicatorWeight:

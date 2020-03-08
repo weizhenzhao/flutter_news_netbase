@@ -27,6 +27,7 @@ dependencies:
   reorderables:
     git:
       url: git://github.com/hanshengchiu/reorderables.git
+  flutter_webview_plugin: ^0.3.10+1
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +53,8 @@ flutter:
     - assets/images/new_peking_news.png
     - assets/news.json
     - assets/video.json
+    - assets/hot_current.json
+    - assets/yuan_yuan_gao.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -1,6 +1,9 @@
 import 'package:flutter_news_netbase/part2/RecentPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_news_netbase/part2/content2/HomeItemListPage.dart';
+import 'package:flutter_news_netbase/part2/content2/HotPageCurrent.dart';
+import 'package:flutter_news_netbase/part2/content2/HotPageComment.dart';
+import 'package:flutter_news_netbase/part2/content2/HotPageRecommend.dart';
 
 List<Widget> data = [
 //  RecentPage(),
@@ -39,7 +42,6 @@ List<Widget> data = [
   Center(
     child: Text('圈子'),
   ),
-
   Center(
     child: Text('财经'),
   ),
@@ -70,7 +72,6 @@ List<Widget> data = [
   Center(
     child: Text('小视频'),
   ),
-
   Center(
     child: Text('NBA'),
   ),
@@ -78,3 +79,16 @@ List<Widget> data = [
     child: Text('热点'),
   ),
 ];
+
+List<Widget> hotTabData = [
+  HotPageCurrent(),
+  HotPageComment(),
+  HotPageRecommend(),
+];
+
+List<String> hotTabsLabels = [
+  '实时热榜',
+  '跟帖热议',
+  '独家推荐',
+];
+

@@ -11,10 +11,11 @@ import 'package:flutter_news_netbase/part1/FreeNewsPage.dart';
 import 'package:flutter_news_netbase/part2/AIItemsPage.dart';
 import 'package:flutter_news_netbase/part2/DrawerPage.dart';
 import 'package:flutter_news_netbase/part2/SearchBar.dart';
-import 'package:flutter_news_netbase/part1/HotPage.dart';
+//import 'package:flutter_news_netbase/part1/HotPage.dart';
 import 'package:flutter_news_netbase/part1/NoticePage.dart';
 import 'package:flutter_news_netbase/part2/routes/VideoTabPage.dart';
 import 'package:flutter_news_netbase/part2/content2/VidaoTabPage2.dart';
+import 'package:flutter_news_netbase/part2/content2/HotPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -96,6 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
           HomePage(),
           //SmallVideoPage(),
           VideoTabPage2(),
+          //HotPage(),
           HotPage(),
           NoticePage(),
         ],
@@ -143,7 +145,7 @@ class _MyHomePageState extends State<MyHomePage> {
         //背景颜色
 
         //icon的大小
-        iconSize: 30,
+        iconSize: 25,
 
         selectedItemColor: Colors.blue,
         //选中时的item颜色，不能喝fixedColor一起使用
@@ -152,7 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
         selectedIconTheme: IconThemeData(size: 20),
         //选中标签的大小，以IconThemeData为准
 
-        selectedFontSize: 20, //选中标签的文字大小
+        selectedFontSize: 10, //选中标签的文字大小
       ),
       drawer: DrawerPage(),
       drawerDragStartBehavior: DragStartBehavior.start,

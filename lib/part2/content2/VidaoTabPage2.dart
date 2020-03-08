@@ -38,8 +38,8 @@ class _VideoTabPage2State extends State<VideoTabPage2>
   @override
   Widget build(BuildContext context) {
     setState(() {
-      tabCommon = TabCommon(tabStrData, tabWidgets, titleWidgets,
-          key: ObjectKey(VideoTabPage2()));
+      tabCommon = TabCommon(tabStrData, tabWidgets,
+          isScrollable: true, key: ObjectKey(VideoTabPage2()));
     });
 
     return tabCommon;

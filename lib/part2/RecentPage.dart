@@ -38,7 +38,7 @@ class _RecentPageState extends State<RecentPage> {
             ),
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               buildContents(
                   'assets/images/daily_economic_news.png', 'item1', Colors.red),
@@ -48,6 +48,8 @@ class _RecentPageState extends State<RecentPage> {
                   Colors.orange),
               buildContents(
                   'assets/images/new_peking_news.png', 'item4', Colors.green),
+              buildContents(
+                  'assets/images/family_it.png', 'item2', Colors.blue),
             ],
           ),
         ],
