@@ -24,10 +24,6 @@ class _HotPageCurrentState extends State<HotPageCurrent> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-//      appBar: AppBar(
-//        title: Text('实时热榜'),
-//      ),
-//      body: buildTitles(data),
       body: FutureBuilder(
         future: rootBundle.loadString('assets/hot_current.json'),
         builder: (BuildContext context, AsyncSnapshot snap) {

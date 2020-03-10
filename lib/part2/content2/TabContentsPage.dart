@@ -1,9 +1,11 @@
-import 'package:flutter_news_netbase/part2/RecentPage.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_news_netbase/part2/content2/HomeItemListPage.dart';
 import 'package:flutter_news_netbase/part2/content2/HotPageCurrent.dart';
 import 'package:flutter_news_netbase/part2/content2/HotPageComment.dart';
 import 'package:flutter_news_netbase/part2/content2/HotPageRecommend.dart';
+import 'package:flutter_news_netbase/part2/circle/CircleRecommendPage.dart';
+import 'package:flutter_news_netbase/part2/circle/CircleSquarePage.dart';
 
 List<Widget> data = [
 //  RecentPage(),
@@ -90,5 +92,17 @@ List<String> hotTabsLabels = [
   '实时热榜',
   '跟帖热议',
   '独家推荐',
+];
+
+
+List<String> circleTabsLabels = [
+  '推荐',
+  '广场',
+];
+
+
+List<Widget> circleTabData = [
+  CircleRecommendPage(),
+  CircleSquarePage(),
 ];
 

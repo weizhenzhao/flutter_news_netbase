@@ -16,6 +16,7 @@ import 'package:flutter_news_netbase/part1/NoticePage.dart';
 import 'package:flutter_news_netbase/part2/routes/VideoTabPage.dart';
 import 'package:flutter_news_netbase/part2/content2/VidaoTabPage2.dart';
 import 'package:flutter_news_netbase/part2/content2/HotPage.dart';
+import 'package:flutter_news_netbase/part2/circle/CirclePage.dart';
 
 void main() => runApp(MyApp());
 
@@ -99,7 +100,8 @@ class _MyHomePageState extends State<MyHomePage> {
           VideoTabPage2(),
           //HotPage(),
           HotPage(),
-          NoticePage(),
+//          NoticePage(),
+          CirclePage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

@@ -2,19 +2,21 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 
 //封装解析json 只需要传入json字符串即可
-HotCurrentModel videoModuleFromJson(String str) =>
-    HotCurrentModel.fromJson(json.decode(str));
+HotRecommendModel recommendModuleFromJson(String str) =>
+    HotRecommendModel.fromJson(json.decode(str));
 
-class HotCurrentModel {
+class HotRecommendModel {
   List<Data> data;
 
-  HotCurrentModel({this.data});
+  HotRecommendModel({this.data});
 
-
-  //改造成factory函数
-  factory HotCurrentModel.fromJson(Map<String, dynamic> json) {
-    return HotCurrentModel(
-        data: List<Data>.from(json['data'].map((x) => Data.fromJson(x))));
+  HotRecommendModel.fromJson(Map<String, dynamic> json) {
+    if (json['data'] != null) {
+      data = new List<Data>();
+      json['data'].forEach((v) {
+        data.add(new Data.fromJson(v));
+      });
+    }
   }
 
   Map<String, dynamic> toJson() {
@@ -27,42 +29,37 @@ class HotCurrentModel {
 }
 
 class Data {
-  String type;
   String sourceId;
   String articleId;
   String updateTime;
   String modifyTime;
   String url;
   String title;
+  String contents;
   String source;
   String img;
   String postid;
-  String hotPoints;
   String commentCount;
   String votecount;
   String replyCount;
 
   Data(
-      {this.type,
-      this.sourceId,
-      this.articleId,
-      this.updateTime,
-      this.modifyTime,
-      this.url,
-      this.title,
-      this.source,
-      this.img,
-      this.postid,
-      this.hotPoints,
-      this.commentCount,
-      this.votecount,
-      this.replyCount});
-
-
+      {this.sourceId,
+        this.articleId,
+        this.updateTime,
+        this.modifyTime,
+        this.url,
+        this.title,
+        this.contents,
+        this.source,
+        this.img,
+        this.postid,
+        this.commentCount,
+        this.votecount,
+        this.replyCount});
 
   factory Data.fromJson(Map<String, dynamic> json) {
     return Data(
-      type: json['type'],
       sourceId: json['sourceId'],
       articleId: json['article_id'],
       updateTime: json['update_time'],
@@ -72,17 +69,16 @@ class Data {
       source: json['source'],
       img: json['img'],
       postid: json['postid'],
-      hotPoints: json['hotPoints'],
-
       commentCount: json['commentCount'],
       votecount: json['votecount'],
       replyCount: json['replyCount'],
+        contents:json['contents'],
     );
   }
 
+
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['type'] = this.type;
     data['sourceId'] = this.sourceId;
     data['article_id'] = this.articleId;
     data['update_time'] = this.updateTime;
@@ -92,11 +88,14 @@ class Data {
     data['source'] = this.source;
     data['img'] = this.img;
     data['postid'] = this.postid;
-    data['hotPoints'] = this.hotPoints;
     data['commentCount'] = this.commentCount;
     data['votecount'] = this.votecount;
     data['replyCount'] = this.replyCount;
+    data['contents'] = this.contents;
     return data;
   }
-}
 
+
+
+
+}

@@ -54,6 +54,9 @@ flutter:
     - assets/news.json
     - assets/video.json
     - assets/hot_current.json
+    - assets/hot_comment.json
+    - assets/hot_recommend.json
+    - assets/circle_square.json
     - assets/yuan_yuan_gao.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
